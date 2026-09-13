@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://witham-carpetfitter.sitecollab.co.uk/sitemap.xml

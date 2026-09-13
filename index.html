@@ -2,13 +2,434 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Witham Flooring Co. — coming soon</title>
-<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Witham Flooring Co. — Carpet &amp; LVT Fitting, Witham Essex</title>
+<meta name="description" content="Carpet, vinyl and LVT fitting in Witham, Essex. Measured and fitted by the same person, usually within days. No showroom, no sales reps, no upsell.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#0d542b;
+    --lime:#b9ff78;
+    --moss:#008236;
+    --coral:#f54320;
+    --coral-wash:#ffe3e3;
+    --black:#000000;
+    --ink:#1c1917;
+    --slate:#292524;
+    --stone:#44403b;
+    --ash:#d6d3d1;
+    --fog:#e5e7eb;
+    --cream:#fcf7ed;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--stone);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{
+    font-family:"Playfair Display",Georgia,serif;
+    font-weight:700;
+    color:var(--black);
+    margin:0;
+    line-height:1.15;
+  }
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    display:inline-block;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-weight:700;
+    color:var(--moss);
+    margin:0 0 16px;
+    padding-bottom:6px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6' preserveAspectRatio='none'%3E%3Cpath d='M0 3 Q5 0 10 3 T20 3 T30 3 T40 3 T50 3 T60 3 T70 3 T80 3 T90 3 T100 3' fill='none' stroke='%23f54320' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat:repeat-x;
+    background-position:bottom left;
+    background-size:34px 6px;
+  }
+  .eyebrow.on-dark{color:var(--lime);}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 24px;
+    border-radius:8px;
+    font-weight:600;
+    font-size:15px;
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .btn-primary{background:var(--lime);color:var(--black);}
+  .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.35);}
+  .btn-ghost.on-cream{color:var(--black);border:1px solid var(--stone);}
+
+  /* placeholders */
+  .ph{
+    position:relative;
+    border-radius:8px;
+    background:
+      linear-gradient(135deg, rgba(13,84,43,0.06) 0%, rgba(13,84,43,0.06) 25%, transparent 25%, transparent 50%, rgba(13,84,43,0.06) 50%, rgba(13,84,43,0.06) 75%, transparent 75%, transparent),
+      linear-gradient(155deg, #f2ecdf, #e4dcc9);
+    background-size: 30px 30px, 100% 100%;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .ph-frame{border-radius:24px;box-shadow:0 20px 40px -12px rgba(245,67,32,0.15);}
+  .ph-label{
+    background:rgba(28,25,23,0.72);
+    color:var(--white);
+    font-size:12px;
+    padding:8px 12px;
+    margin:10px;
+    border-radius:6px;
+    line-height:1.4;
+  }
+  img.ph{width:100%;object-fit:cover;display:block;}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:1px solid var(--fog);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .logo{font-family:"Playfair Display",serif;font-weight:700;font-size:21px;color:var(--black);}
+  nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;}
+  nav a{font-size:14px;font-weight:600;color:var(--stone);}
+  nav a:hover{color:var(--forest);}
+  .nav-right{display:flex;align-items:center;gap:28px;}
+  @media (max-width:760px){nav ul{display:none;}}
+
+  /* hero */
+  .hero{background:var(--forest);color:var(--white);padding:76px 0 90px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
+  .hero h1{color:var(--white);font-size:52px;letter-spacing:-0.01em;}
+  .hero p.lede{font-size:18px;color:#dce8de;margin:22px 0 30px;max-width:46ch;}
+  .hero-ctas{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .hero-ctas .btn-ghost{font-size:14px;}
+  .hero .ph{height:420px;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}.hero h1{font-size:38px;}.hero .ph{height:280px;}}
+
+  /* usp strip */
+  .usp{padding:64px 0;}
+  .usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  .usp-card h3{font-family:"Inter";font-weight:700;font-size:17px;color:var(--black);margin-bottom:10px;}
+  .usp-card p{font-size:14.5px;color:var(--stone);margin:0;}
+  @media (max-width:820px){.usp-grid{grid-template-columns:1fr;}}
+
+  /* services */
+  .services-section{padding:24px 0 64px;}
+  .section-head{max-width:640px;margin-bottom:40px;}
+  .section-head h2{font-size:34px;}
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .service{background:var(--white);border-radius:8px;padding:0;overflow:hidden;border:1px solid var(--fog);}
+  .service .ph{height:160px;border-radius:0;}
+  .service-copy{padding:20px 22px 24px;}
+  .service-copy h3{font-family:"Inter";font-size:16px;font-weight:700;color:var(--black);margin-bottom:6px;}
+  .service-copy p{font-size:14px;color:var(--stone);margin:0;}
+  @media (max-width:820px){.services{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.services{grid-template-columns:1fr;}}
+
+  /* before/after */
+  .ba-section{padding:64px 0;background:var(--white);border-top:1px solid var(--fog);border-bottom:1px solid var(--fog);}
+  .ba-intro{max-width:620px;margin-bottom:44px;}
+  .ba-intro p{font-size:15.5px;color:var(--stone);margin-top:14px;}
+  .ba-pairs{display:flex;flex-direction:column;gap:40px;}
+  .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;}
+  .ba-pair .ph{height:260px;}
+  .ba-caption{grid-column:1 / -1;font-size:14px;color:var(--stone);margin-top:2px;}
+  .ba-caption b{color:var(--black);}
+  @media (max-width:700px){.ba-pair{grid-template-columns:1fr;}.ba-pair .ph{height:220px;}}
+
+  /* about */
+  .about{background:var(--forest);color:var(--white);padding:72px 0;}
+  .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+  .about .ph{height:380px;}
+  .about h2{color:var(--white);font-size:32px;margin-bottom:18px;}
+  .about p{color:#dce8de;font-size:15.5px;margin:0 0 16px;}
+  .about blockquote{
+    margin:26px 0 0;
+    padding:20px 22px;
+    background:rgba(255,255,255,0.06);
+    border-radius:8px;
+    font-family:"Playfair Display",serif;
+    font-size:19px;
+    font-style:italic;
+    color:var(--white);
+  }
+  .stat-row{display:flex;gap:36px;margin-top:26px;}
+  .stat b{display:block;font-size:24px;color:var(--lime);font-weight:700;font-family:"Playfair Display",serif;}
+  .stat span{font-size:12px;color:#b9c9bd;text-transform:uppercase;letter-spacing:0.06em;}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr;}.about .ph{height:260px;}}
+
+  /* work grid */
+  .work-section{padding:64px 0;}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .work-grid .ph{aspect-ratio:4/3;height:auto;border-radius:8px;}
+  @media (max-width:820px){.work-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.work-grid{grid-template-columns:1fr;}}
+
+  /* testimonials */
+  .testimonials{background:var(--coral-wash);padding:60px 0;}
+  .t-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .t-card{background:var(--white);border-radius:8px;padding:28px 26px;}
+  .t-mark{color:var(--coral);font-family:"Playfair Display",serif;font-size:44px;line-height:1;display:block;margin-bottom:6px;}
+  .t-card p.quote{font-size:16.5px;color:var(--ink);margin:0 0 14px;font-family:"Playfair Display",serif;font-style:italic;}
+  .t-card p.attr{font-size:13px;color:var(--stone);margin:0;}
+  @media (max-width:760px){.t-grid{grid-template-columns:1fr;}}
+
+  /* service area */
+  .area{padding:40px 0;text-align:center;}
+  .area p{font-size:14px;color:var(--stone);margin:0;}
+  .area b{color:var(--black);}
+
+  /* contact */
+  .contact{padding:64px 0 76px;background:var(--white);border-top:1px solid var(--fog);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;}
+  .contact dl{margin:18px 0 0;}
+  .contact dt{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--moss);font-weight:700;margin-top:20px;}
+  .contact dt:first-child{margin-top:0;}
+  .contact dd{margin:4px 0 0;font-size:15px;color:var(--ink);}
+  .demo-notice{
+    border:1px solid var(--ash);
+    border-left:3px solid var(--coral);
+    background:var(--coral-wash);
+    padding:14px 16px;
+    font-size:13px;
+    color:var(--ink);
+    border-radius:6px;
+    margin-bottom:20px;
+  }
+  form{display:flex;flex-direction:column;gap:14px;}
+  form input, form textarea{
+    font-family:inherit;
+    font-size:15px;
+    padding:13px 14px;
+    border:1px solid var(--fog);
+    border-radius:8px;
+    background:var(--cream);
+    color:var(--stone);
+  }
+  form textarea{min-height:110px;resize:vertical;}
+  form button{align-self:flex-start;opacity:0.6;cursor:not-allowed;}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr;gap:40px;}}
+
+  footer{border-top:1px solid var(--fog);padding:32px 0;background:var(--cream);}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer p{margin:0;font-size:12px;color:var(--stone);max-width:640px;}
+</style>
 </head>
-<body style="font-family: sans-serif; max-width: 40em; margin: 4em auto; line-height:1.5;">
-<h1>Witham Flooring Co.</h1>
-<p>Page under construction.</p>
-<hr>
-<p style="font-size:0.85em;color:#666;">This is an example site built by SiteCollab to demonstrate our work. It is not a real business.</p>
+<body>
+
+<header>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">Witham Flooring Co.</a>
+    <div class="nav-right">
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#before-after">Before &amp; After</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="#contact">Get a fast quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow on-dark">Carpet, Vinyl &amp; LVT — Witham, Essex</span>
+      <h1>Measured Tuesday.<br>Fitted Thursday.</h1>
+      <p class="lede">Family-run flooring fitting for Witham and the surrounding villages. No showroom, no sales reps, no three-week wait — the person who measures your room is the person who fits it.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">Get a fast quote</a>
+        <a class="btn btn-ghost" href="#before-after">See our before &amp; afters →</a>
+      </div>
+    </div>
+    <div class="ph ph-frame"><span class="ph-label">Hero — fitter laying carpet in a bright Witham living room, mid-job, tape measure in shot</span></div>
+  </div>
+</section>
+
+<section class="usp">
+  <div class="wrap usp-grid">
+    <div class="usp-card">
+      <span class="eyebrow">Why Witham Flooring Co.</span>
+      <h3>Same person, start to finish</h3>
+      <p>No handoff between a salesperson and a fitter. Mark measures your room and fits it himself, so nothing gets lost in translation.</p>
+    </div>
+    <div class="usp-card">
+      <h3 style="margin-top:34px;">Days, not weeks</h3>
+      <p>Most jobs are measured and fitted within the same week — not stuck behind a three-week retailer backlog.</p>
+    </div>
+    <div class="usp-card">
+      <h3 style="margin-top:34px;">No upsell, no finance pitch</h3>
+      <p>We tell you what the job actually needs — not what pays the best commission on the day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we fit</span>
+      <h2>Every type of flooring, fitted properly</h2>
+    </div>
+    <div class="services">
+      <div class="service">
+        <div class="ph"><span class="ph-label">Close-up of new carpet being stretched and fitted with a knee kicker</span></div>
+        <div class="service-copy"><h3>Carpet supply &amp; fitting</h3><p>Samples brought to your home, fitted to order — no showroom trip required.</p></div>
+      </div>
+      <div class="service">
+        <div class="ph"><span class="ph-label">Vinyl/LVT plank being clicked into place in a kitchen</span></div>
+        <div class="service-copy"><h3>Vinyl &amp; LVT fitting</h3><p>Durable, water-resistant flooring fitted cleanly around kitchens and bathrooms.</p></div>
+      </div>
+      <div class="service">
+        <div class="ph"><span class="ph-label">Stair carpet runner being fitted with brass stair rods</span></div>
+        <div class="service-copy"><h3>Stair carpets &amp; runners</h3><p>Tidy, safe stair carpet and runners fitted to the exact tread and riser.</p></div>
+      </div>
+      <div class="service">
+        <div class="ph"><span class="ph-label">Underlay and gripper rod being laid on bare floorboards</span></div>
+        <div class="service-copy"><h3>Underlay &amp; gripper rod</h3><p>The right underlay for the room — comfort, sound and heat retention sorted properly.</p></div>
+      </div>
+      <div class="service">
+        <div class="ph"><span class="ph-label">Old carpet rolled up and ready for disposal, van in background</span></div>
+        <div class="service-copy"><h3>Old carpet removal &amp; disposal</h3><p>Your old flooring lifted, removed and disposed of responsibly — one less job for you.</p></div>
+      </div>
+      <div class="service">
+        <div class="ph"><span class="ph-label">Empty rental flat with fresh flooring, keys on the counter</span></div>
+        <div class="service-copy"><h3>Landlord &amp; rental turnaround</h3><p>Fast-track fitting between tenants, so the property isn't sitting empty.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ba-section" id="before-after">
+  <div class="wrap">
+    <div class="ba-intro">
+      <span class="eyebrow">See the difference</span>
+      <h2>Before and after, same day</h2>
+      <p>A fresh floor changes a room more than almost anything else you can do to it. Here are three real jobs — before we started, and after we finished.</p>
+    </div>
+    <div class="ba-pairs">
+      <div class="ba-pair">
+        <div class="ph"><span class="ph-label">Before — worn, flattened carpet in a Witham living room</span></div>
+        <div class="ph"><span class="ph-label">After — same living room with fresh neutral carpet fitted</span></div>
+        <p class="ba-caption"><b>Living room recarpet</b> — Witham</p>
+      </div>
+      <div class="ba-pair">
+        <div class="ph"><span class="ph-label">Before — dated, cracked vinyl in a hallway</span></div>
+        <div class="ph"><span class="ph-label">After — same hallway with grey LVT plank fitted</span></div>
+        <p class="ba-caption"><b>Hallway LVT fitting</b> — Hatfield Peverel</p>
+      </div>
+      <div class="ba-pair">
+        <div class="ph"><span class="ph-label">Before — bare, tenant-worn floorboards in an empty flat</span></div>
+        <div class="ph"><span class="ph-label">After — same flat with fresh grey carpet, ready to let</span></div>
+        <p class="ba-caption"><b>Rental turnaround</b> — Witham</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="ph"><span class="ph-label">Portrait of Mark Doel on-site, tools in hand, mid-fit</span></div>
+    <div>
+      <span class="eyebrow on-dark">About</span>
+      <h2>11 years fitting floors, no showroom in sight</h2>
+      <p>Mark Doel spent nine years fitting carpets for a regional flooring retailer — the kind with a showroom and a sales team — before deciding customers deserved to deal with the person actually doing the work, not a rep upselling underlay and finance plans.</p>
+      <p>Since 2015, Witham Flooring Co. has fitted carpet, vinyl and LVT across Witham and the surrounding villages, with samples brought to your home and no showroom overhead to pay for.</p>
+      <blockquote>"The person who measures your room is the person who fits it."</blockquote>
+      <div class="stat-row">
+        <div class="stat"><b>11</b><span>Years trading</span></div>
+        <div class="stat"><b>2</b><span>Fitters</span></div>
+        <div class="stat"><b>0</b><span>Sales reps</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Recent work</span>
+      <h2>A few rooms we've fitted lately</h2>
+    </div>
+    <div class="work-grid">
+      <div class="ph"><span class="ph-label">Freshly fitted beige carpet in a bright bedroom</span></div>
+      <div class="ph"><span class="ph-label">LVT plank flooring fitted in an open-plan kitchen diner</span></div>
+      <div class="ph"><span class="ph-label">Stair runner fitted with brass rods, landing view</span></div>
+      <div class="ph"><span class="ph-label">Grey carpet fitted in a rental flat living room</span></div>
+      <div class="ph"><span class="ph-label">Close-up detail of neat carpet edge against skirting board</span></div>
+      <div class="ph"><span class="ph-label">Hallway LVT fitted flush against a front door threshold</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap t-grid">
+    <div class="t-card">
+      <span class="t-mark">"</span>
+      <p class="quote">Measured Tuesday, fitted Thursday. The big shop quoted us three weeks.</p>
+      <p class="attr">— placeholder, Witham</p>
+    </div>
+    <div class="t-card">
+      <span class="t-mark">"</span>
+      <p class="quote">No pushy upsell on underlay like we got everywhere else. Just told us what we actually needed.</p>
+      <p class="attr">— placeholder, Hatfield Peverel</p>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <p>Based in Witham, also fitting in <b>Hatfield Peverel</b>, <b>Kelvedon</b> and <b>Rivenhall</b>.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Get in touch</span>
+      <h2 style="font-size:30px;">Get a fixed quote</h2>
+      <dl>
+        <dt>Workshop</dt>
+        <dd>Witham, Essex</dd>
+        <dt>Hours</dt>
+        <dd>Mon–Fri 8am–5pm, Sat by arrangement</dd>
+        <dt>Service area</dt>
+        <dd>Witham, Hatfield Peverel, Kelvedon, Rivenhall</dd>
+      </dl>
+    </div>
+    <div>
+      <div class="demo-notice">This is a demo site built by SiteCollab. The form below is disabled — no messages are sent or stored.</div>
+      <form>
+        <input type="text" placeholder="Your name" disabled>
+        <input type="email" placeholder="Email address" disabled>
+        <textarea placeholder="Tell us about the room" disabled></textarea>
+        <button class="btn btn-primary" type="button" disabled>Form disabled — demo site</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>This is an example site built by SiteCollab to demonstrate our work. It is not a real business.</p>
+    <p>© Witham Flooring Co. — a SiteCollab portfolio demo</p>
+  </div>
+</footer>
+
 </body>
 </html>
